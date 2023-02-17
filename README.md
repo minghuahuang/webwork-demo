@@ -1,4 +1,4 @@
-# web worker 简单实用
+# web worker 简单使用
 
 ## 项目启动
 
