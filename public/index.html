@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Worker</title>
+</head>
+<body>
+	<div id="wrapper">0</div>
+
+	<script type="text/javascript">
+		var div = document.getElementById('wrapper');
+
+		var worker = new Worker('./worker.js')
+		worker.postMessage('start')
+		worker.onmessage = function(event) {
+			div.innerHTML = event.data
+		}
+
+		console.log(1)
+	</script>
+</body>
+</html>
